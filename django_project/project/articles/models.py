@@ -7,3 +7,7 @@ class Atricles(models.Model):
     slug = models.SlugField()
     body = models.TextField()
     date = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        '''make queryset return instances of model using its attribute value'''
+        return self.title
