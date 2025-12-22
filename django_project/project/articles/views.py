@@ -7,7 +7,7 @@ from django.http import HttpResponse
 def home(request):
     '''content is rendered dynamically onto the homepage.html of the app'''
     articles = Atricles.objects.all()
-    print(article)
+    # print(article)
     return render(request,'articles/homepage.html', {'articles': articles})
 
 def article(request, slug):
