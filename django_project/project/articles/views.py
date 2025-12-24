@@ -11,5 +11,6 @@ def home(request):
     return render(request,'articles/homepage.html', {'articles': articles})
 
 def article(request, slug):
-    '''display the slug that is present in the url'''
-    return HttpResponse(slug)
+    '''searche for the template with same slug and then display it'''
+    article = Atricles.objects.get(slug=slug)
+    return render(request, 'articles/detail.html', {'article':article})
