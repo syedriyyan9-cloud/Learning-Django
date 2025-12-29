@@ -4,7 +4,8 @@
 
 {% block content %}
 
-<form class="form-site" action="/accounts/templates/accounts/signup.html" method="post">
+<form class="form-site" action="/accounts/signup/" method="post">
+    {% csrf_token %}
     {{form}}
     <button type="submit">Submit</button>
 </form>
