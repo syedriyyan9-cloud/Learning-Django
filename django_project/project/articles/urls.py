@@ -5,6 +5,7 @@ app_name = 'articles'
 
 urlpatterns = [
     path('', views.home, name='list'),
+    path("create/",views.articles_create, name = "create"),
     # first slug is path formatter, other is a variable, 
     # same name to be used in the associated function
     path('<slug:slug>/', views.article, name = 'detail'), 
